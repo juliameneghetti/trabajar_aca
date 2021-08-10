@@ -1,0 +1,50 @@
+
+/*SECCIÓN CONTACTO*/
+
+.formulario__background--estilo{
+    background: {
+        image: url("./multimedia/imagenes/contacto/mancha.png");
+        repeat: no-repeat;
+        position: center;
+        size: contain;
+    }
+
+    .row{
+        margin: 30px;
+    }
+    
+    .form-control{
+        margin-bottom: 40px;
+
+        background-color: $opacidad;
+        border: 1px solid $colorSecundario;
+
+        &:focus{
+            border-color: transparent;
+
+            box-shadow: none;
+        }
+
+        &::placeholder{
+            color: $colorFuente;
+        }
+    }
+
+    .btn{
+        width: 25%;
+
+        color: $colorFuente;
+
+        background-color: $opacidad;
+        border: 1px solid $colorSecundario;
+
+        &:hover{
+            background-color: $opacidadSecundario;
+            color: $colorSecundario;
+        }
+
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}

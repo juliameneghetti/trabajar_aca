@@ -1,0 +1,55 @@
+
+/*SECCIÓN TIENDA*/
+
+.seccion__tienda--background{
+    background: {
+        image: url("./multimedia/imagenes/tienda/mancha.png");
+        repeat: no-repeat;
+        position: center;
+    }
+}
+
+.seccion__tienda--flex{
+    display: flex;
+    flex-flow: wrap;
+    justify-content:space-around;
+    text-align: center;
+
+    padding-bottom: 100px;
+
+    img{
+        @include tamaño (350px, 450px);
+
+        border: 20px solid $opacidad;
+        
+        transition: all 2s;
+
+        &:hover{
+            @include tamaño (400px, 500px);
+        }
+    }
+
+    div{
+        margin-top: 5px;
+        background-color: $opacidad;
+    
+        h5{
+            font-size: 14px;
+            color: $colorSecundario;
+
+            padding: 10px 0;
+        }
+
+        button{        
+            color: $colorSecundario;
+
+            padding: 10px 0;
+    
+            &:hover{
+                width: 100%;
+    
+                background-color: $opacidadSecundario;
+            }
+        }
+    }
+}

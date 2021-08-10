@@ -1,0 +1,40 @@
+
+/*SECCIÓN SOBRE MI*/
+
+.seccion__sobreMi--flex{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;      
+
+    img{
+        @include tamaño (auto, 900px);
+
+        padding-top: 80px;
+    }
+
+    .seccion__sobreMi--container{
+        display: block;
+       
+        position: relative;
+
+        @include tamaño (auto, 900px);
+
+        p{
+            position: absolute;
+
+            top: 60%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+
+
+            text-align: right;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            line-height: 25px;
+
+            color: $colorSecundario;
+
+            @include tamaño (400px, 400px);
+        }
+    }
+}

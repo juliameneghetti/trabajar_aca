@@ -1,0 +1,36 @@
+
+/*HEADER*/
+
+.header__logo--tamaño{
+    @include tamaño (auto, 100px);
+
+    padding-left: 20px;
+}
+
+/*NAV*/
+
+.bg-dark {
+    background-color: transparent!important;
+}
+
+.navbar-collapse {
+    justify-content:flex-end;
+    
+    img{
+        height: 30px;
+    
+        margin: 30px;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(114, 110, 110);
+
+    &:hover {
+        color: $colorFuente;
+    }
+}
+
+.nav-link{
+    margin: 20px;
+}
