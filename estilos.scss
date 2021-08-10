@@ -2,14 +2,521 @@
 @import "./bootstrap/scss/bootstrap.scss";
 
 
-@import "base";
-@import "variables";
-@import "header";
-@import "index";
-@import "sobre_mi";
-@import "new_in";
-@import "tienda";
-@import "galeria";
-@import "contacto";
-@import "footer";
-@import "media_queries";
+// @import "base";
+// @import "variables";
+// @import "header";
+// @import "index";
+// @import "sobre_mi";
+// @import "new_in";
+// @import "tienda";
+// @import "galeria";
+// @import "contacto";
+// @import "footer";
+// @import "media_queries";
+
+/*VARIABLES*/
+
+$colorFuente: rgb(226, 115, 160);
+$colorSecundario: white;
+$opacidad: rgba(234, 155, 187, .40);
+$opacidadSecundario: rgba(234, 155, 187, .60);
+
+/*MAPS*/
+
+@mixin tamaño ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+/*SETEO BASE*/
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Spartan', sans-serif;
+
+    button{
+        background-color: transparent;
+        border: transparent;
+    }
+
+    body{
+        background-color: black;
+    }
+}
+
+/*BODY*/
+/*HEADER*/
+
+.header__logo--tamaño{
+    @include tamaño (auto, 100px);
+
+    padding-left: 20px;
+}
+
+/*NAV*/
+
+.bg-dark {
+    background-color: transparent!important;
+}
+
+.navbar-collapse {
+    justify-content:flex-end;
+    
+    img{
+        height: 30px;
+    
+        margin: 30px;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(114, 110, 110);
+
+    &:hover {
+        color: $colorFuente;
+    }
+}
+
+.nav-link{
+    margin: 20px;
+}
+
+/* SECCIÓN HOME */
+
+.home__video{
+    width: 100%;
+    margin-top: 50px;
+}
+
+/*ENLACE TIENDA*/
+
+.home__boton--enlace{
+    display: block;
+    
+    position: relative;
+    
+    text-align: center;
+    
+    margin: 100px auto 0 auto;
+
+    width: 350px;
+    height: 120px;
+
+    a{
+        text-decoration: none;
+
+        font-size: 20px;
+        color: black;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover{
+        animation: headShake;
+        animation-duration: 1s;
+    }
+}
+
+/*SECCIÓN SOBRE MI*/
+
+.seccion__sobreMi--flex{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;      
+
+    img{
+        @include tamaño (auto, 900px);
+
+        padding-top: 80px;
+    }
+
+    .seccion__sobreMi--container{
+        display: block;
+       
+        position: relative;
+
+        @include tamaño (auto, 900px);
+
+        p{
+            position: absolute;
+
+            top: 60%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+
+
+            text-align: right;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            line-height: 25px;
+
+            color: $colorSecundario;
+
+            @include tamaño (400px, 400px);
+        }
+    }
+}
+
+/*SECCIÓN NEW IN*/
+
+h1{
+    font: {
+        family: 'Wire One', sans-serif;
+
+        size: 50px;
+    }
+
+    color: $colorSecundario;
+
+    text-align: center;
+
+    margin: 40px 0;
+}
+
+.seccion__newIn--background{
+    background: {
+        image: url("./multimedia/imagenes/new_in/mancha.png");
+        repeat: no-repeat;
+        position: center;
+        size: contain;
+    }
+}
+
+.carousel-item{
+    img{
+
+        @include tamaño (auto, 900px);
+
+        margin: 0 auto;
+    }
+
+    h5{
+        color: $colorSecundario;
+    }
+
+    button{
+        margin-top: 20px;
+        padding: 10px 40px;
+
+        color: $colorSecundario;
+     
+        &:hover{
+            background-color: $opacidadSecundario;
+            border-radius: 10px; 
+        }
+    }
+}
+
+/*SECCIÓN TIENDA*/
+
+.seccion__tienda--background{
+    background: {
+        image: url("./multimedia/imagenes/tienda/mancha.png");
+        repeat: no-repeat;
+        position: center;
+    }
+}
+
+.seccion__tienda--flex{
+    display: flex;
+    flex-flow: wrap;
+    justify-content:space-around;
+    text-align: center;
+
+    padding-bottom: 100px;
+
+
+    .prueba{
+        background-color: $opacidad;
+
+        @include tamaño (400px, 650px);  
+
+        img{
+            margin-top: 25px;
+
+            @include tamaño (350px, 450px);
+    
+            transition: all 1s;
+            
+            &:hover{
+                @include tamaño (400px, 500px);
+            }
+        }
+
+        div{
+            margin-top: 5px;
+        
+            h5{
+                font-size: 14px;
+                color: $colorSecundario;
+    
+                padding: 10px 0;
+            }
+    
+            button{        
+                color: $colorSecundario;
+    
+                padding: 10px 0;
+        
+                &:hover{
+                    width: 100%;
+        
+                    background-color: $opacidadSecundario;
+                }
+            }
+        }
+    }
+
+    
+
+        // img{
+        //     @include tamaño (350px, 450px);
+
+        //     border: 20px solid $opacidad;
+        
+        //     transition: all 2s;
+
+        //     &:hover{
+        //         @include tamaño (350px, 450px);
+        //     }
+        // }
+
+        // div{
+        //     margin-top: 5px;
+        //     background-color: $opacidad;
+    
+        //     h5{
+        //         font-size: 14px;
+        //         color: $colorSecundario;
+
+        //         padding: 10px 0;
+        //     }
+
+        //     button{        
+        //         color: $colorSecundario;
+
+        //         padding: 10px 0;
+    
+        //         &:hover{
+        //             width: 100%;
+    
+        //             background-color: $opacidadSecundario;
+        //         }
+        //     }
+        // }
+    
+}
+
+/*SECCIÓN GALERÍA*/
+
+.seccion__galeria--grid{
+    img{
+        filter: grayscale(100%);
+        transition: all 0.3s; 
+
+        &:hover{
+            filter: grayscale(0%);
+            transition: all 0.3s; 
+        }
+    }   
+
+    video{
+        display: flex;
+       
+        @include tamaño (100%, 100%);
+    }   
+}
+
+/*SECCIÓN CONTACTO*/
+
+.formulario__background--estilo{
+    background: {
+        image: url("./multimedia/imagenes/contacto/mancha.png");
+        repeat: no-repeat;
+        position: center;
+        size: contain;
+    }
+
+    .row{
+        margin: 30px;
+    }
+    
+    .form-control{
+        margin-bottom: 40px;
+
+        background-color: $opacidad;
+        border: 1px solid $colorSecundario;
+
+        &:focus{
+            border-color: transparent;
+
+            box-shadow: none;
+        }
+
+        &::placeholder{
+            color: $colorFuente;
+        }
+    }
+
+    .btn{
+        width: 25%;
+
+        color: $colorFuente;
+
+        background-color: $opacidad;
+        border: 1px solid $colorSecundario;
+
+        &:hover{
+            background-color: $opacidadSecundario;
+            color: $colorSecundario;
+        }
+
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    background-color: rgba(73, 72, 72, .17);
+
+    text-align: center;
+    justify-content: center;
+
+    padding: 20px;
+    margin-top: 100px;
+
+    img{
+        height: 60px;
+
+        margin: 0 30px;
+    }
+
+    a{
+        text-decoration: none;
+
+        color: $colorFuente;
+
+        &:hover{
+            color: $colorFuente;
+        }
+    }
+
+    .footer__boton--redes:hover{
+        animation: swing;
+        animation-duration: 1s;
+    }
+
+    .footer__boton--contacto{
+        font-size: 13px;
+
+        padding-top: 30px;
+    }
+}
+
+/*RESPONSIVE*/
+
+@media screen and (min-width: 400px) and (max-width: 767px){
+
+    /*SECCIÓN SOBRE MI*/
+
+    .seccion__sobreMi--flex{
+      
+        justify-content: center;      
+    
+        img{
+            @include tamaño (400px, auto);
+        }
+    
+        .seccion__sobreMi--container{
+            @include tamaño (400px, auto);
+           
+            p{
+                top: 30%;
+                left: 50%;
+              
+                text-align: center;
+
+                @include tamaño (350px, auto);
+            }
+        }
+    }
+
+    /*SECCIÓN NEW IN*/
+
+    .carousel-item{ 
+
+        img{
+            @include tamaño (450px, auto);
+        }
+
+        h5{
+            font-size: 15px;
+        }
+    }
+
+    /*SECCIÓN TIENDA*/
+
+    .prueba{
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+    /*SECCIÓN SOBRE MI*/
+
+    .seccion__sobreMi--flex{
+      
+        justify-content: center;      
+    
+        img{
+            @include tamaño (500px, auto);
+        }
+    
+        .seccion__sobreMi--container{
+            @include tamaño (500px, auto);
+           
+            p{
+                top: 30%;
+                left: 50%;
+              
+                text-align: center;
+                font-size: 20px;
+
+                @include tamaño (400px, auto);
+            }
+        }
+    }
+
+    /*SECCIÓN NEW IN*/
+
+    .carousel-item{ 
+
+        img{
+            @include tamaño (500px, auto);
+        }
+
+        h5{
+            font-size: 20px;
+        }
+    }
+
+    /*SECCIÓN TIENDA*/
+
+    .prueba{
+        margin-bottom: 35px;
+    }
+}
+
+
+
+
