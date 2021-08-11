@@ -155,6 +155,7 @@ $opacidadSecundario: rgba(234, 155, 187, .60);
             word-spacing: 5px;
             line-height: 25px;
 
+            font-size: 20px;
             color: $colorSecundario;
 
             @include tamaño (400px, 400px);
@@ -231,7 +232,7 @@ h1{
     padding-bottom: 100px;
 
 
-    .prueba{
+    .seccion__tienda--imagenes{
         background-color: $opacidad;
 
         @include tamaño (400px, 650px);  
@@ -270,46 +271,7 @@ h1{
                 }
             }
         }
-    }
-
-    
-
-        // img{
-        //     @include tamaño (350px, 450px);
-
-        //     border: 20px solid $opacidad;
-        
-        //     transition: all 2s;
-
-        //     &:hover{
-        //         @include tamaño (350px, 450px);
-        //     }
-        // }
-
-        // div{
-        //     margin-top: 5px;
-        //     background-color: $opacidad;
-    
-        //     h5{
-        //         font-size: 14px;
-        //         color: $colorSecundario;
-
-        //         padding: 10px 0;
-        //     }
-
-        //     button{        
-        //         color: $colorSecundario;
-
-        //         padding: 10px 0;
-    
-        //         &:hover{
-        //             width: 100%;
-    
-        //             background-color: $opacidadSecundario;
-        //         }
-        //     }
-        // }
-    
+    }    
 }
 
 /*SECCIÓN GALERÍA*/
@@ -463,9 +425,15 @@ footer{
         }
     }
 
+    .carousel-caption {
+        position: static;
+
+        padding-top: 5px;
+    }
+
     /*SECCIÓN TIENDA*/
 
-    .prueba{
+    .seccion__tienda--imagenes{
         margin-bottom: 35px;
     }
 }
@@ -502,17 +470,77 @@ footer{
     .carousel-item{ 
 
         img{
-            @include tamaño (500px, auto);
+            @include tamaño (450px, auto);
         }
 
         h5{
-            font-size: 20px;
+            font-size: 15px;
         }
+    }
+
+    .carousel-caption {
+        position: static;
+
+        padding-top: 5px;
     }
 
     /*SECCIÓN TIENDA*/
 
-    .prueba{
+    .seccion__tienda--imagenes{
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+
+    /*SECCIÓN SOBRE MI*/
+
+    .seccion__sobreMi--flex{
+      
+        justify-content: center;      
+    
+        img{
+            @include tamaño (500px, auto);
+        }
+    
+        .seccion__sobreMi--container{
+            @include tamaño (500px, auto);
+           
+            p{
+                top: 30%;
+                left: 50%;
+              
+                text-align: center;
+                font-size: 25px;
+                line-height: 30px;
+
+                @include tamaño (500px, auto);           
+            }
+        }
+    }
+
+    /*SECCIÓN NEW IN*/
+
+    .carousel-item{ 
+
+        img{
+            @include tamaño (600px, auto);
+        }
+
+        h5{
+            font-size: 15px;
+        }
+    }
+
+    .carousel-caption {
+        position: static;
+
+        padding-top: 5px;
+    }
+
+    /*SECCIÓN TIENDA*/
+
+    .seccion__tienda--imagenes{
         margin-bottom: 35px;
     }
 }
