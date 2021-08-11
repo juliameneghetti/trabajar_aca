@@ -407,7 +407,7 @@ footer{
               
                 text-align: center;
 
-                @include tamaño (350px, auto);
+                @include tamaño (400px, auto);
             }
         }
     }
@@ -417,7 +417,7 @@ footer{
     .carousel-item{ 
 
         img{
-            @include tamaño (450px, auto);
+            @include tamaño (400px, auto);
         }
 
         h5{
@@ -454,13 +454,14 @@ footer{
             @include tamaño (500px, auto);
            
             p{
-                top: 30%;
+                top: 20%;
                 left: 50%;
               
                 text-align: center;
                 font-size: 20px;
+                line-height: 25px;
 
-                @include tamaño (400px, auto);
+                @include tamaño (500px, auto);
             }
         }
     }
@@ -500,21 +501,21 @@ footer{
         justify-content: center;      
     
         img{
-            @include tamaño (500px, auto);
+            @include tamaño (600px, auto);
         }
     
         .seccion__sobreMi--container{
-            @include tamaño (500px, auto);
+            @include tamaño (600px, auto);
            
             p{
-                top: 30%;
+                top: 20%;
                 left: 50%;
               
                 text-align: center;
                 font-size: 25px;
                 line-height: 30px;
 
-                @include tamaño (500px, auto);           
+                @include tamaño (600px, auto);           
             }
         }
     }

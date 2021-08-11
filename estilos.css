@@ -12315,12 +12315,12 @@ footer .footer__boton--contacto {
     top: 30%;
     left: 50%;
     text-align: center;
-    width: 350px;
+    width: 400px;
     height: auto;
   }
   /*SECCIÓN NEW IN*/
   .carousel-item img {
-    width: 450px;
+    width: 400px;
     height: auto;
   }
   .carousel-item h5, .carousel-item .h5 {
@@ -12352,11 +12352,12 @@ footer .footer__boton--contacto {
     height: auto;
   }
   .seccion__sobreMi--flex .seccion__sobreMi--container p {
-    top: 30%;
+    top: 20%;
     left: 50%;
     text-align: center;
     font-size: 20px;
-    width: 400px;
+    line-height: 25px;
+    width: 500px;
     height: auto;
   }
   /*SECCIÓN NEW IN*/
@@ -12385,20 +12386,20 @@ footer .footer__boton--contacto {
             justify-content: center;
   }
   .seccion__sobreMi--flex img {
-    width: 500px;
+    width: 600px;
     height: auto;
   }
   .seccion__sobreMi--flex .seccion__sobreMi--container {
-    width: 500px;
+    width: 600px;
     height: auto;
   }
   .seccion__sobreMi--flex .seccion__sobreMi--container p {
-    top: 30%;
+    top: 20%;
     left: 50%;
     text-align: center;
     font-size: 25px;
     line-height: 30px;
-    width: 500px;
+    width: 600px;
     height: auto;
   }
   /*SECCIÓN NEW IN*/
